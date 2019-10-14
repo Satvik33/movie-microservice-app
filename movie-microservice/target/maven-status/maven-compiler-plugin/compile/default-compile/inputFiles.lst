@@ -1,0 +1,14 @@
+/home/cgi/Documents/springapp/microservices/movie-microservice/src/main/java/com/stackroute/userservice/UserserviceApplication.java
+/home/cgi/Documents/springapp/microservices/movie-microservice/src/main/java/com/stackroute/userservice/startup/SeedLogicApproach1.java
+/home/cgi/Documents/springapp/microservices/movie-microservice/src/main/java/com/stackroute/userservice/repository/MovieRepository.java
+/home/cgi/Documents/springapp/microservices/movie-microservice/src/main/java/com/stackroute/userservice/config/WebConfiguration.java
+/home/cgi/Documents/springapp/microservices/movie-microservice/src/main/java/com/stackroute/userservice/exceptions/MovieAlreadyExistsException.java
+/home/cgi/Documents/springapp/microservices/movie-microservice/src/main/java/com/stackroute/userservice/exceptions/MovieNotFoundException.java
+/home/cgi/Documents/springapp/microservices/movie-microservice/src/main/java/com/stackroute/userservice/service/MovieService.java
+/home/cgi/Documents/springapp/microservices/movie-microservice/src/main/java/com/stackroute/userservice/domain/Movie.java
+/home/cgi/Documents/springapp/microservices/movie-microservice/src/main/java/com/stackroute/userservice/startup/SeedLogicApproach2.java
+/home/cgi/Documents/springapp/microservices/movie-microservice/src/main/java/com/stackroute/userservice/service/TrackDummyServiceImpl.java
+/home/cgi/Documents/springapp/microservices/movie-microservice/src/main/java/com/stackroute/userservice/service/MovieServiceImpl.java
+/home/cgi/Documents/springapp/microservices/movie-microservice/src/main/java/com/stackroute/userservice/controller/MovieController.java
+/home/cgi/Documents/springapp/microservices/movie-microservice/src/main/java/com/stackroute/userservice/Configuration/SwaggerConfig.java
+/home/cgi/Documents/springapp/microservices/movie-microservice/src/main/java/com/stackroute/userservice/exceptions/GlobalExceptionHandler.java

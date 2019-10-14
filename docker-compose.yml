@@ -1,0 +1,68 @@
+version: '3'
+services:
+ mysql:
+   image: mysql:latest
+   ports:
+      - "3306:3306"
+   container_name: mysql-server
+   network_mode: host
+   environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: newDB
+        MYSQL_USER: app_root
+        MYSQL_PASSWORD: Root@123
+   volumes:
+     - $HOME/var/lib:/var/lib/mysql
+ spring-movie:
+   build: movie-microservice/
+   restart: always
+   network_mode: host
+   container_name: movie-app
+   depends_on:
+       - mongo
+   ports:
+       - "8080:8080"
+ spring-user:
+   build: usermicroservice/
+#   restart: always
+   network_mode: host
+   container_name: user-app
+   depends_on:
+       - mysql
+   ports:
+       - "8082:8082"
+ spring-zuul:
+   build: API-Gateway-Demo/
+   restart: always
+   network_mode: host
+   hostname: localhost
+   container_name: netflix-zuul
+   ports:
+      - "8090:8090" 
+ mongo:
+   image: mongo:3.4-xenial
+   ports:
+      - "27017:27017"
+   container_name: mongo-docker
+   network_mode: host
+   volumes:
+     - $HOME/data/db:/data/db 
+ spring-eureka:
+   image: eureka1
+   build: spring-eureka-server/
+   restart: always
+   network_mode: host
+   hostname: localhost
+   container_name: eureka1
+   ports:
+      - "8761:8761" 
+ spring-config-server:
+   image: config-docker
+   build: configserver/
+   restart: always
+   network_mode: host
+   container_name: config-docker
+   ports:
+      - "8888:8888" 
+    
+ 
